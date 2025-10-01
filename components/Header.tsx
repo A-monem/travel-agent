@@ -10,7 +10,7 @@ const Header = ({ title, description }: Props) => {
   const location = useLocation();
 
   return (
-    <header className="header ml-3">
+    <header className="header">
       <article>
         <h1
           className={cn(
