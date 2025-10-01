@@ -4,5 +4,4 @@ export default [
   layout("routes/admin/admin-layout.tsx", [
     route("dashboard", "routes/admin/dashboard.tsx"),
   ]),
-  route("test", "routes/test.tsx"),
 ] satisfies RouteConfig;
