@@ -140,3 +140,9 @@ export const RIGHT_CONFETTI = {
   angle: 135,
   origin: { x: 1, y: 1 },
 };
+
+export const user = {
+  name: "David",
+  email: "david@example.com",
+  imageUrl: "/assets/images/david.webp",
+};

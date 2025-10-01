@@ -1,7 +1,13 @@
+import Header from "../../../components/Header";
+import { user } from "~/constants";
+
 const Dashboard = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
+      <Header
+        title={`Hello ${user?.name}`}
+        description="Track activity, trends and popular destinations in real time"
+      />
     </div>
   );
 };
