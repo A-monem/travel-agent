@@ -1,5 +1,4 @@
 import Header from "../../../components/Header";
-import { user } from "~/constants";
 
 const AllUsers = () => {
   return (

@@ -1,7 +1,14 @@
+import { useOutletContext } from "react-router";
 import { Header, StatsCard, TripCard } from "../../../components";
-import { user, dashboardStats, allTrips } from "~/constants";
+import { dashboardStats, allTrips } from "~/constants";
+
+type ContextType = {
+  user: BaseUser;
+};
 
 const Dashboard = () => {
+  const { user } = useOutletContext<ContextType>();
+
   return (
     <div className="dashboard wrapper">
       <Header

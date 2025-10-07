@@ -36,12 +36,16 @@ export const storeUserData = async () => {
         name: user.name,
         imageUrl: profilePicture,
         joinedAt: new Date().toISOString(),
+        //added
+        status: "admin", //Allowing admin by default for testing purposes
       }
     );
 
     if (!createdUser.$id) redirect("/sign-in");
+    return createdUser;
   } catch (error) {
     console.error("Error storing user data:", error);
+    return null;
   }
 };
 
@@ -62,10 +66,11 @@ const getGooglePicture = async (accessToken: string) => {
 };
 
 export const loginWithGoogle = async () => {
+  console.log("Initiating Google login", window.location.origin);
   try {
-    account.createOAuth2Session(
+    await account.createOAuth2Session(
       OAuthProvider.Google,
-      `${window.location.origin}/`,
+      `${window.location.origin}/dashboard`,
       `${window.location.origin}/404`
     );
   } catch (error) {
