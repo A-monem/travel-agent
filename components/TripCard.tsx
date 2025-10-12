@@ -15,7 +15,7 @@ const TripCard = ({
   price,
 }: TripCardProps) => {
   const path = useLocation();
-  console.log(name);
+
   return (
     <Link
       to={

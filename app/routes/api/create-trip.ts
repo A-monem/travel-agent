@@ -71,11 +71,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
       .getGenerativeModel({ model: "gemini-2.0-flash" })
       .generateContent([prompt]);
 
-    console.log("textResult", textResult);
-
     const trip = parseMarkdownToJson(textResult.response.text());
-
-    console.log("trip", trip);
 
     const imageResponse = await fetch(
       `https://api.unsplash.com/search/photos?query=${country} ${interests} ${travelStyle}&client_id=${unsplashApiKey}`
